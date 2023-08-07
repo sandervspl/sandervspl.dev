@@ -1,7 +1,14 @@
 {
   "private": true,
   "type": "module",
+  "scripts": {
+    "dev": "tailwindcss -i ./styles.css -o ./dist/styles.css --watch",
+    "build": "tailwindcss -i ./styles.css -o ./dist/styles.cssd"
+  },
   "dependencies": {
     "@vercel/edge": "^0.1.2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
   }
 }
