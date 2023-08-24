@@ -3,94 +3,120 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
+    <link href="/dist/styles.css" rel="stylesheet" />
+    <title>Sander Vispoel</title>
     <meta
       name="description"
-      content="High-performance HTML based website template."
+      content="Sander Vispoel is a fullstack developer from The Netherlands."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐠</text></svg>"
     />
   </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
+  <body class="text-neutral-700 bg-neutral-50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 my-20">
+      <div class="mx-auto max-w-2xl space-y-10">
+        <div>
+          <h1 class="text-2xl font-bold">Sander Vispoel</h1>
+          <p class="text-neutral-500">Fullstack Developer</p>
+        </div>
+
+        <div class="space-y-2">
+          <h2 class="text-xl">Projects</h2>
+          <ul class="space-y-2">
+            <li
+              class="hover:bg-neutral-100 bg-neutral-50 transition p-2 -ml-2 rounded-lg"
+            >
+              <a href="https://wowvalor.app">
+                <h3>Wowvalor.app</h3>
+                <p class="text-neutral-500">
+                  World of Warcraft website with statistics for high-end
+                  players.
+                </p>
+              </a>
+            </li>
+            <li
+              class="hover:bg-neutral-100 bg-neutral-50 transition p-2 -ml-2 rounded-lg"
+            >
+              <a href="https://curseforge.com/wow/addons/bufftimers">
+                <h3>Buff Timers</h3>
+                <p class="text-neutral-500">World of Warcraft addon</p>
+              </a>
+            </li>
+            <li
+              class="hover:bg-neutral-100 bg-neutral-50 transition p-2 -ml-2 rounded-lg"
+            >
+              <a
+                href="https://chrome.google.com/webstore/detail/auctionoton-auction-house/ffflgkmjodhdladikaglbeofemhbojio"
+              >
+                <h3>Auctionoton</h3>
+                <p class="text-neutral-500">
+                  Chrome extension for World of Warcraft players
+                </p>
+              </a>
+            </li>
+            <li
+              class="hover:bg-neutral-100 bg-neutral-50 transition p-2 -ml-2 rounded-lg"
+            >
+              <a
+                href="https://github.com/sandervspl?tab=repositories&q=&type=public&language=&sort="
+              >
+                <h3>Public repositories</h3>
+                <p class="text-neutral-500">Too many to list them all</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h2 class="text-xl">Find me</h2>
+          <ul class="flex gap-6">
+            <li
+              class="hover:bg-neutral-100 bg-neutral-50 transition p-2 -ml-2 rounded-lg"
+            >
+              <a
+                href="https://github.com/sandervspl"
+                class="flex gap-1.5 items-center"
+              >
+                <img
+                  src="https://unpkg.com/lucide-static@latest/icons/github.svg"
+                  class="h-4 w-4"
+                />
+                GitHub
+              </a>
+            </li>
+            <li
+              class="hover:bg-neutral-100 bg-neutral-50 transition p-2 -ml-2 rounded-lg"
+            >
+              <a
+                href="https://instagram.com/sandervspl"
+                class="flex gap-1.5 items-center"
+              >
+                <img
+                  src="https://unpkg.com/lucide-static@latest/icons/instagram.svg"
+                  class="h-4 w-4"
+                />
+                Instagram
+              </a>
+            </li>
+            <li
+              class="hover:bg-neutral-100 bg-neutral-50 transition p-2 -ml-2 rounded-lg"
+            >
+              <a
+                href="https://twitter.com/sandervspl"
+                class="flex gap-1.5 items-center"
+              >
+                <img
+                  src="https://unpkg.com/lucide-static@latest/icons/twitter.svg"
+                  class="h-4 w-4"
+                />
+                Twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
