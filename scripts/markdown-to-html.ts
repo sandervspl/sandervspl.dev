@@ -18,7 +18,8 @@ type Meta = {
 
 const html = String.raw;
 
-const template = (content: string, meta: Meta) => html`
+function template(content: string, meta: Meta) {
+  return html`
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,25 +30,38 @@ const template = (content: string, meta: Meta) => html`
     ${content}
   </body>
 </html>`;
+}
 
-const glob = new Glob('*.md');
-for await (const file of glob.scan({ cwd: 'blog', absolute: true })) {
-  const matterOutput = await unified()
-    .use(remarkParse)
-    .use(remarkStringify)
-    .use(remarkFrontmatter, { type: 'yaml', marker: '-' })
-    .use(() => (tree: Node, file: VFile) => {
-      matter(file);
-    })
-    .process(await read(file));
+export async function markdownToHtml(dir: string) {
+  const glob = new Glob('*.md');
 
-  const output = await unified()
-    .use(remarkParse)
-    .use(remarkFrontmatter)
-    .use(remarkRehype)
-    .use(rehypeStringify)
-    .process(await Bun.file(file).text());
+  const pages: { pathname: string; content: string }[] = [];
 
-  console.log(matterOutput.data.matter);
-  console.log(template(String(output), matterOutput.data.matter as Meta));
+  for await (const file of glob.scan({ cwd: dir, absolute: true })) {
+    const matterOutput = await unified()
+      .use(remarkParse)
+      .use(remarkStringify)
+      .use(remarkFrontmatter, { type: 'yaml', marker: '-' })
+      .use(() => (tree: Node, file: VFile) => {
+        matter(file);
+      })
+      .process(await read(file));
+
+    const output = await unified()
+      .use(remarkParse)
+      .use(remarkFrontmatter)
+      .use(remarkRehype)
+      .use(rehypeStringify)
+      .process(await Bun.file(file).text());
+
+    // console.log(matterOutput.data.matter);
+    // console.log(template(String(output), matterOutput.data.matter as Meta));
+
+    pages.push({
+      pathname: file,
+      content: template(String(output), matterOutput.data.matter as Meta),
+    });
+  }
+
+  return pages;
 }
