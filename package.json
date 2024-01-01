@@ -3,13 +3,16 @@
   "type": "module",
   "scripts": {
     "dev": "tailwindcss -i ./styles.css -o ./dist/styles.css --watch",
-    "build": "tailwindcss -i ./styles.css -o ./dist/styles.css"
+    "build": "tailwindcss -i ./styles.css -o ./dist/styles.css",
+    "format": "bunx @biomejs/biome format . --write",
+    "lint": "bunx @biomejs/biome lint scripts/"
   },
   "dependencies": {
-    "@vercel/edge": "^0.1.2"
+    "@vercel/edge": "^1.1.1"
   },
   "devDependencies": {
-    "tailwindcss": "^3.3.3",
-    "typescript": "^5.1.6"
+    "@biomejs/biome": "1.4.1",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.3"
   }
 }
