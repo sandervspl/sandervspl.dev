@@ -3,8 +3,8 @@
   "outputDirectory": ".",
   "rewrites": [
     {
-      "source": "/about",
-      "destination": "/about.html"
+      "source": "/blog/test",
+      "destination": "/blog/test.html"
     }
   ]
 }
