@@ -1,5 +1,6 @@
 import { markdownToHtml } from './markdown-to-html';
 import vercelJSON from '../vercel.json';
+import { moveHtmlPages } from './move-html-pages';
 
 // Vercel rewrites list
 const rewrites: { source: string; destination: string }[] = [];
@@ -18,6 +19,13 @@ for await (const dir of ['blog']) {
     rewrites.push({
       source: `/${dir}/${outputPath.split(`/${dir}/`).at(-1)?.replace('.html', '')}`,
       destination: `/dist/${dir}/${outputPath.split(`${dir}/`).at(-1)}`,
+    });
+  }
+
+  for await (const page of await moveHtmlPages('src')) {
+    rewrites.push({
+      source: `/${page.pathname.split('/').at(-1)?.replace('.html', '').replace('index', '')}`,
+      destination: `/dist/${page.pathname.split('/').at(-1)}`,
     });
   }
 }
