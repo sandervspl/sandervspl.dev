@@ -8,16 +8,16 @@ console.info('🏗️ Generating pages...');
 
 // Transform every markdown file in the given directories to HTML
 for await (const dir of ['blog']) {
-  const pages = await markdownToHtml(dir);
+  const pages = await markdownToHtml(`src/${dir}`);
 
   for await (const page of pages) {
     const filename = page.pathname.replace(/\.md$/, '.html');
-
-    await Bun.write(filename, page.content);
+    const outputPath = filename.replace('src', 'dist');
+    await Bun.write(outputPath, page.content);
 
     rewrites.push({
-      source: `/${dir}/${filename.split(`/${dir}/`).at(-1)?.replace('.html', '')}`,
-      destination: `/${dir}/${filename.split(`${dir}/`).at(-1)}`,
+      source: `/${dir}/${outputPath.split(`/${dir}/`).at(-1)?.replace('.html', '')}`,
+      destination: `/dist/${dir}/${outputPath.split(`${dir}/`).at(-1)}`,
     });
   }
 }
