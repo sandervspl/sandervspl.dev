@@ -1,9 +1,10 @@
+import { execSync } from 'node:child_process';
+
 import { generatePages } from './generate-pages';
-import { buildTailwind } from './tailwind';
 
 export async function build() {
   await generatePages();
-  await buildTailwind();
+  execSync('tailwindcss -i ./src/styles.css -o ./dist/styles.css', { stdio: 'inherit' });
 }
 
 await build();

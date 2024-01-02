@@ -1,7 +1,8 @@
+import fs from 'node:fs';
+
 import { markdownToHtml } from './markdown-to-html';
 import vercelJSON from '../vercel.json';
 import { moveHtmlPages } from './move-html-pages';
-import fs from 'node:fs';
 
 export async function generatePages() {
   // Vercel rewrites list
