@@ -1,11 +1,16 @@
 import { markdownToHtml } from './markdown-to-html';
 import vercelJSON from '../vercel.json';
 import { moveHtmlPages } from './move-html-pages';
+import fs from 'node:fs';
 
 // Vercel rewrites list
 const rewrites: { source: string; destination: string }[] = [];
 
 console.info('🏗️ Generating pages...');
+
+if (!fs.existsSync('dist')) {
+  fs.mkdirSync('dist');
+}
 
 // Transform every markdown file in the given directories to HTML
 for await (const dir of ['blog']) {
