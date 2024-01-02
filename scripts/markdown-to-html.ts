@@ -1,4 +1,3 @@
-import rehypeSanitize from 'rehype-sanitize';
 import remarkRehype from 'remark-rehype';
 import remarkStringify from 'remark-stringify';
 import rehypeStringify from 'rehype-stringify';
