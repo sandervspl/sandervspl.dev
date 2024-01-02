@@ -43,8 +43,10 @@ function template(content: string, meta: Meta) {
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
   </head>
-  <body class="prose">
-    ${content}
+  <body class="prose text-neutral-700 bg-neutral-50 dark:bg-neutral-900 dark:text-neutral-200 transition-colors">
+    <main class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 my-20">
+      ${content}
+    </main>
   </body>
 </html>`;
 }
