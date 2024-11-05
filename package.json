@@ -4,8 +4,8 @@
   "scripts": {
     "dev": "tailwindcss -i ./styles.css -o ./dist/styles.css --watch",
     "build": "bun scripts/generate-pages.ts && tailwindcss -i ./styles.css -o ./dist/styles.css",
-    "format": "bunx @biomejs/biome format . --write",
-    "lint": "bunx @biomejs/biome lint scripts/"
+    "format": "biome format . --write",
+    "lint": "biome lint scripts/"
   },
   "dependencies": {
     "@vercel/edge": "^1.1.1",
