@@ -1,8 +1,10 @@
+/**
+ * @TODO Update for Cloudflare
+ */
+
 import { markdownToHtml } from './markdown-to-html';
-import vercelJSON from '../vercel.json';
 import { moveHtmlPages } from './move-html-pages';
 
-// Vercel rewrites list
 const rewrites: { source: string; destination: string }[] = [];
 
 console.info('🏗️ Generating pages...');
@@ -29,18 +31,5 @@ for await (const dir of ['blog']) {
     });
   }
 }
-
-// Update rewrites in vercel.json
-await Bun.write(
-  'vercel.json',
-  JSON.stringify(
-    {
-      ...vercelJSON,
-      rewrites,
-    },
-    null,
-    2,
-  ),
-);
 
 console.info('✅ Pages generated');
