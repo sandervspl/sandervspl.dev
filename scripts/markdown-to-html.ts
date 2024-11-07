@@ -41,7 +41,7 @@ function template(content: string, meta: Meta) {
           (window.vaq = window.vaq || []).push(arguments);
         };
     </script>
-    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer data-domain="sandervspl.dev" src="https://plausible.sandervspl.dev/js/script.js"></script>
   </head>
   <body class="prose">
     ${content}
