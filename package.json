@@ -12,6 +12,7 @@
   "scripts": {
     "dev": "rm -rf dist && NODE_ENV=development parcel",
     "build": "NODE_ENV=production parcel build && cp -r public/* dist/",
+    "build:cloudflare": "node scripts/cloudflare-build.js && pnpm run build",
     "format": "biome format . --write",
     "lint": "biome lint scripts/"
   },
