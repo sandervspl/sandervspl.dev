@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "parcel",
-    "build": "parcel build && cp -r public/* dist/",
+    "build": "parcel build",
     "format": "biome format . --write",
     "lint": "biome lint scripts/"
   },
