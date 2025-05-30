@@ -2,7 +2,7 @@
   "name": "sandervspl.dev",
   "private": true,
   "version": "0.0.0",
-  "packageManager": "pnpm@10.7.1",
+  "packageManager": "pnpm@10.11.0",
   "targets": {
     "react-static": {
       "source": "src/pages/*",
@@ -17,23 +17,23 @@
     "lint": "biome lint scripts/"
   },
   "dependencies": {
-    "@parcel/rsc": "^2.14.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@parcel/config-default": "^2.14.4",
-    "@parcel/packager-react-static": "^2.14.4",
-    "@parcel/transformer-react-static": "^2.14.4",
-    "@parcel/transformer-svg-jsx": "^2.14.4",
-    "@tailwindcss/postcss": "^4.1.0",
-    "@types/react-dom": "^19.0.0",
-    "@types/react": "^19.0.0",
-    "parcel": "^2.14.0",
-    "postcss": "^8.2.1",
+    "@parcel/config-default": "2.15.2",
+    "@parcel/packager-react-static": "2.15.2",
+    "@parcel/rsc": "2.15.2",
+    "@parcel/transformer-react-static": "2.15.2",
+    "@parcel/transformer-svg-jsx": "2.15.2",
+    "@tailwindcss/postcss": "^4.1.8",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "parcel": "2.15.2",
+    "postcss": "^8.5.4",
     "react-server-dom-parcel": "^19.1.0",
-    "svgo": "^3",
-    "tailwindcss": "^4.1.0"
+    "svgo": "^3.3.2",
+    "tailwindcss": "^4.1.8"
   }
 }
