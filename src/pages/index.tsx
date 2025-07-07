@@ -1,5 +1,5 @@
 import '../globals.css';
-import '../client';
+// import '../client';
 import type { PageProps } from '@parcel/rsc';
 import { Head } from '../components/head';
 import GithubIcon from 'jsx:../icons/github.svg';
