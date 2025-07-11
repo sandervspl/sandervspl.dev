@@ -13,8 +13,12 @@
     "dev": "rm -rf dist && NODE_ENV=development parcel",
     "build": "NODE_ENV=production parcel build && cp -r public/* dist/",
     "build:cloudflare": "pnpm run build",
+    "prebuild": "pnpm test",
     "format": "biome format . --write",
-    "lint": "biome lint scripts/"
+    "lint": "biome lint scripts/",
+    "test": "vitest --run",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage"
   },
   "dependencies": {
     "react": "^19.1.0",
@@ -28,12 +32,19 @@
     "@parcel/transformer-react-static": "2.15.2",
     "@parcel/transformer-svg-jsx": "2.15.2",
     "@tailwindcss/postcss": "^4.1.8",
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react": "^4.3.1",
+    "@vitest/coverage-v8": "^3.2.4",
+    "jsdom": "^24.1.1",
     "parcel": "2.15.2",
     "postcss": "^8.5.4",
     "react-server-dom-parcel": "^19.1.0",
     "svgo": "^3.3.2",
-    "tailwindcss": "^4.1.8"
+    "tailwindcss": "^4.1.8",
+    "vitest": "^1.6.0"
   }
 }

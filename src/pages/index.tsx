@@ -2,6 +2,8 @@ import '../globals.css';
 // import '../client';
 import type { PageProps } from '@parcel/rsc';
 import { Head } from '../components/head';
+import { ProjectListItem } from '../components/project-list-item';
+import { SocialLink } from '../components/social-link';
 import GithubIcon from 'jsx:../icons/github.svg';
 import InstagramIcon from 'jsx:../icons/instagram.svg';
 import TwitterIcon from 'jsx:../icons/twitter.svg';
@@ -71,33 +73,5 @@ export default function Page(props: PageProps) {
         </main>
       </body>
     </html>
-  );
-}
-
-function ProjectListItem({
-  title,
-  description,
-  href,
-}: { title: string; description: string; href: string }) {
-  return (
-    <li className="transition p-2 -ml-2 rounded-lg group">
-      <a href={href} target="_blank" rel="noreferrer">
-        <h3 className="underline underline-offset-[6px] mb-2 decoration-neutral-300 dark:decoration-neutral-600 group-hover:decoration-cyan-400 dark:group-hover:decoration-yellow-200 transition-colors">
-          {title}
-        </h3>
-        <p className="text-neutral-500 dark:text-neutral-400">{description}</p>
-      </a>
-    </li>
-  );
-}
-
-function SocialLink({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) {
-  return (
-    <li className="hover:bg-neutral-100 dark:hover:bg-neutral-800! transition p-2 -ml-2 rounded-lg">
-      <a href={href} className="flex gap-1.5 items-center text-sm" target="_blank" rel="noreferrer">
-        {icon}
-        {label}
-      </a>
-    </li>
   );
 }
