@@ -21,8 +21,8 @@
     "test:coverage": "vitest --coverage"
   },
   "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react": "^19.1.2",
+    "react-dom": "^19.1.2"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
